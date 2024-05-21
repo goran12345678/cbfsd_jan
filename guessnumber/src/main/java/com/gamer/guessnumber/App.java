@@ -25,6 +25,7 @@ public class App
         
         System.out.println("Game engine title: " + engine.getTitle());
         
+        System.out.println("current score: " + engine.getScoreBoard().getScore());
         
         
     }

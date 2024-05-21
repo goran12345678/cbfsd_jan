@@ -12,7 +12,7 @@
 	</bean>
 	<bean id="scoreboard"
 		class="com.gamer.guessnumber.bean.ScoreBoard">
-		<property name="score" value="0"></property>
+		<property name="score" value="5"></property>
 	</bean>
 
 </beans>
