@@ -1,6 +1,12 @@
 package com.gamer.guessnumber.bean;
 
-public class ScoreBoard {
+import java.io.Serializable;
+
+public class ScoreBoard implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer score;
 
 	public ScoreBoard() {

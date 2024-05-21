@@ -10,8 +10,14 @@ public class GameEngine implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private	String title;
-	@Autowired
 	private ScoreBoard scoreBoard;
+	public GameEngine() {
+		// TODO Auto-generated constructor stub
+	}
+	@Autowired
+	public GameEngine(ScoreBoard scoreBoard) {
+		this.scoreBoard = scoreBoard;
+	}
 	public String getTitle() {
 		return title;
 	}
