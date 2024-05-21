@@ -2,12 +2,15 @@ package com.gamer.guessnumber.bean;
 
 import java.io.Serializable;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class GameEngine implements Serializable {
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private	String title;
+	@Autowired
 	private ScoreBoard scoreBoard;
 	public String getTitle() {
 		return title;
