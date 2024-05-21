@@ -8,6 +8,7 @@
 	<bean id="engine" class="com.gamer.guessnumber.bean.GameEngine"
 		scope="prototype">
 		<property name="title" value="My First Game"></property>
+	<property name="scoreBoard" ref="scoreboard"></property>
 	</bean>
 	<bean id="scoreboard"
 		class="com.gamer.guessnumber.bean.ScoreBoard">
