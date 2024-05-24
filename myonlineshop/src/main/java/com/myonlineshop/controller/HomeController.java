@@ -29,7 +29,7 @@ public class HomeController {
 		
 		ApplicationContext cxt = ContextProvider.provideContext();
 		Db db = cxt.getBean("db",Db.class);
-		//db.insert(p);
+		db.insert(p);
 		
 		//name of jsp file to display the view
 		return "home";

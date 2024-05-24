@@ -12,7 +12,7 @@
 	<bean id="ds"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="url"
-			value="jdbc:mysql://DELL0:3306/simplilearn?allowPublicKeyRetrieval=True&amp;useSSL=False" />
+			value="jdbc:mysql://localhost:3306/simplilearn?allowPublicKeyRetrieval=True&amp;useSSL=False" />
 		<property name="driverClassName"
 			value="com.mysql.cj.jdbc.Driver" />
 		<property name="username" value="sqluser" />

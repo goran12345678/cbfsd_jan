@@ -12,12 +12,11 @@ import com.myonlineshop.model.User;
 public class UserController {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login(Model model) {
-        
+	public String login() {
 		return "login";
 	}
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String addProduct(User user, Model model) {
+	public String validateLogin(User user, Model model) {
 		
 		model.addAttribute("user", user);
 		

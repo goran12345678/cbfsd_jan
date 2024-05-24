@@ -34,13 +34,13 @@ public class Db {
 	public int insert(Product p) {
 		// TODO Auto-generated method stub
 
-		String sql = "insert into products values(null,?,?,?,?)";
+		String sql = "insert into Products values(null,?,?,?,?)";
 		return (int) template.update(sql, p.getName(), p.getMake(), p.getDescription(), p.getPrice());
 	}
 
 	public List<Product> getProducst(){
 		List<Product> products = new ArrayList<Product>();
-		this.template.query("SELECT * FROM products",
+		this.template.query("SELECT * FROM Products",
 		        (rs, rowNum) -> new Product(rs.getInt("id"), rs.getString("name"), rs.getString("make")
 		        		,rs.getString("description"), (rs.getLong("price"))),"")
 		    .forEach(product -> products.add(product));
