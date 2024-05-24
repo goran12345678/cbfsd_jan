@@ -21,8 +21,8 @@ public class HomeController {
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String getHomePage() {
 		
-		Product p = new Product();
-		p.setDescription("test");
+		Product p = new Product(); 
+		p.setDescription("test"); 
 		p.setMake("Ford");
 		p.setName("T");
 		p.setPrice(300.00f);
