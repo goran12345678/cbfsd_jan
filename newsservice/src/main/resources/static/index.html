@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>News Service</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<header>
+		<!-- Jumbotron -->
+		<div class="p-5 text-center bg-body-tertiary">
+			<h1 class="mb-3">My News Service</h1>
+			<h4 class="mb-3">If you don't know, then something is going on.</h4>
+			<a data-mdb-ripple-init class="btn btn-primary" href="" role="button">Premium
+				Membership</a> <a data-mdb-ripple-init class="btn btn-secondary" href=""
+				role="button">Regular Membership</a> <a data-mdb-ripple-init
+				class="btn btn-link" href="" role="button">Less Is Better</a>
+		</div>
+		<!-- Jumbotron -->
+	</header>
+
+
+	<form id="form1" action="/login" method="post">
+		<div class="mb-3">
+			<label for="email" class="form-label">Email address</label> <input
+				type="email" class="form-control" id="email" name="email"
+				aria-describedby="emailHelp" />
+			<div id="emailHelp" class="form-text">We'll never share your
+				email with anyone else.</div>
+		</div>
+		<div class="mb-3">
+			<label for="password" class="form-label">Password</label> <input
+				type="password" class="form-control" id="password" name="password" />
+		</div>
+		<button type="submit" class="btn btn-primary" id="submit">Submit</button>
+	</form>
+
+	<script type="text/javascript">
+
+		form.onsubmit  = function(event) {
+			const form = document.getElementById('form1');
+			const emailEl = document.getElementById('email');
+			const passwordEl = document.getElementById('password');
+			const json = {email: emailEl.value, password: passwordEl.value};
+			
+			event.preventDefault();			
+			var req = new XMLHttpRequest();
+			req.open("POST", "/submit");
+			req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+			req.send(JSON.stringify(json));
+		};
+	</script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+
+</body>
+</html>
